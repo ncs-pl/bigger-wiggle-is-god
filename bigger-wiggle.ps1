@@ -233,18 +233,6 @@ $PlayMario = {
 	[System.Threading.Thread]::Sleep(625);
 }
 
-$currWidth=70
-$currHeight=70
-
-# initial resizing if needed
-$host.UI.RawUI.WindowSize = New-Object System.Management.Automation.Host.size($currWidth,$currHeight)
-
-# Set the Buffer
-$host.UI.RawUI.BufferSize = New-Object System.Management.Automation.Host.size($Width,2000)
-
-# Now set the WindowSize
-$host.UI.RawUI.WindowSize = New-Object System.Management.Automation.Host.size($Width,$Height)
-
 Start-Job -Name MarioIsAGoodPerson -ScriptBlock $PlayMario
 
 For (1) {
